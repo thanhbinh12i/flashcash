@@ -12,6 +12,7 @@ import {
   BookOpen,
   Lightbulb,
   Users,
+  Shield,
 } from "lucide-react";
 
 const DuyVatSieuHinhTab = ({ audioState }) => {
@@ -260,82 +261,93 @@ Hệ quả trong thực tiễn:
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 shadow-lg border border-green-200 mb-8">
-        <h4 className="text-2xl font-bold text-green-700 mb-6 flex items-center gap-3">
-          <BookOpen className="w-7 h-7" />
-          Ví dụ minh họa trong thực tế
-        </h4>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white/80 rounded-2xl p-6 shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">x</span>
+      <div className="mb-2">
+        <div className="mx-auto">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 shadow-lg border border-green-200 mb-8">
+            <h4 className="text-2xl font-bold text-green-700 mb-6 flex items-center gap-3">
+              <BookOpen className="w-7 h-7" />
+              Ví dụ minh họa trong thực tế
+            </h4>
+          </div>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 mb-8 overflow-hidden">
+            <div className="bg-gradient-to-r from-red-600 to-pink-600 p-6">
+              <div className="flex items-center gap-4 text-white">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Shield className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold">
+                  Ví dụ 1: Đại dịch COVID-19 (duy vật)
+                </h3>
               </div>
-              <h5 className="font-bold text-gray-800">
-                Trong phát triển cá nhân
-              </h5>
             </div>
-            <p className="text-gray-600 mb-3 font-medium">Quan điểm sai lầm:</p>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              "Tính cách và tài năng hoàn toàn do gen quyết định. Con người
-              không thể thay đổi bản thân, chỉ có thể chờ đợi điều kiện thuận
-              lợi."
-            </p>
+
+            <div className="p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 font-bold mt-1">•</span>
+                  <span>
+                    <strong>Vật chất</strong>: Virus SARS-CoV-2 xuất hiện và lây
+                    lan trên toàn cầu.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 font-bold mt-1">•</span>
+                  <span>
+                    <strong>Ý thức</strong>: Con người buộc phải thay đổi lối
+                    sống, ý thức về sức khỏe, phát triển vaccine, đẩy mạnh làm
+                    việc online.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 font-bold mt-1">👉</span>
+                  <span>
+                    Vật chất (dịch bệnh) → quyết định ý thức (ứng xử xã hội,
+                    chính sách y tế).
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="bg-white/80 rounded-2xl p-6 shadow-md">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold">x</span>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6">
+              <div className="flex items-center gap-4 text-white">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Brain className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold">
+                  Ví dụ 2: Trí tuệ nhân tạo (AI)
+                </h3>
               </div>
-              <h5 className="font-bold text-gray-800">Trong xã hội</h5>
             </div>
-            <p className="text-gray-600 mb-3 font-medium">Quan điểm sai lầm:</p>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              "Xã hội thay đổi chỉ do yếu tố kinh tế. Ý thức, văn hóa, tư tưởng
-              không có vai trò gì trong sự tiến bộ xã hội."
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <Target className="w-8 h-8 text-white" />
+            <div className="p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-indigo-500 font-bold mt-1">•</span>
+                  <span>
+                    <strong>Vật chất</strong>: Sự tiến bộ trong thuật toán, sức
+                    mạnh chip xử lý, dữ liệu lớn (big data).
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-indigo-500 font-bold mt-1">•</span>
+                  <span>
+                    <strong>Ý thức</strong>: Con người nhận ra tiềm năng và rủi
+                    ro của AI, từ đó đặt ra chính sách quản lý, luật pháp và đạo
+                    đức AI.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-indigo-500 font-bold mt-1">👉</span>
+                  <span>
+                    Vật chất (công nghệ) → quyết định ý thức (cách con người sử
+                    dụng và quản lý).
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <h5 className="font-bold text-blue-700 mb-3 text-center text-lg">
-            🎯 Quan điểm cốt lõi
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Vật chất quyết định tuyệt đối ý thức, không thừa nhận vai trò tác
-            động ngược
-          </p>
-        </div>
-
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <AlertTriangle className="w-8 h-8 text-white" />
-          </div>
-          <h5 className="font-bold text-amber-700 mb-3 text-center text-lg">
-            ⚠️ Hạn chế chủ yếu
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Phủ nhận tính năng động, sáng tạo và độc lập tương đối của ý thức
-          </p>
-        </div>
-
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <Users className="w-8 h-8 text-white" />
-          </div>
-          <h5 className="font-bold text-red-700 mb-3 text-center text-lg">
-            📌 Hệ quả thực tiễn
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Dẫn đến thụ động, ỷ lại, không phát huy được tiềm năng con người
-          </p>
         </div>
       </div>
 

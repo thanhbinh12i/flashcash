@@ -22,6 +22,8 @@ import {
   Telescope,
   Music,
   Paintbrush,
+  Coins,
+  Rocket,
 } from "lucide-react";
 
 const DuyTamTab = ({ audioState }) => {
@@ -338,111 +340,81 @@ Hệ quả:
         </div>
       </div>
 
-      <div className="mb-8 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 shadow-xl border border-green-200">
-        <h4 className="text-2xl font-bold text-green-700 mb-6 flex items-center gap-3">
-          <Theater className="w-7 h-7" />
-          Ví dụ minh họa trong thực tế
-        </h4>
+      <div className="mb-4">
+        <div className="mx-auto">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-6 shadow-lg border border-green-200 mb-4">
+            <h4 className="text-2xl font-bold text-green-700 mb-6 flex items-center gap-3">
+              <BookOpen className="w-7 h-7" />
+              Ví dụ minh họa trong thực tế
+            </h4>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white/90 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
-                <Lightbulb className="w-6 h-6 text-white" />
-              </div>
-              <h5 className="font-bold text-gray-800">Trong giáo dục</h5>
-            </div>
-            <div className="space-y-3">
-              <div className="p-3 bg-blue-50 rounded-lg border-l-3 border-blue-400">
-                <p className="text-sm font-medium text-blue-800 mb-1">
-                  ✅ Quan điểm duy tâm:
-                </p>
-                <p className="text-xs text-gray-600">
-                  "Học sinh chỉ cần có ý chí và động lực cao là sẽ học giỏi.
-                  Điều kiện học tập, phương pháp giảng dạy không quan trọng bằng
-                  tinh thần."
-                </p>
-              </div>
-              <div className="p-3 bg-red-50 rounded-lg border-l-3 border-red-400">
-                <p className="text-sm font-medium text-red-800 mb-1">
-                  ❌ Hạn chế:
-                </p>
-                <p className="text-xs text-gray-600">
-                  Bỏ qua tầm quan trọng của phương pháp, công cụ học tập, và môi
-                  trường giáo dục.
-                </p>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 mb-4 overflow-hidden">
+            <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6">
+              <div className="flex items-center gap-4 text-white">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Rocket className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold">
+                  Ví dụ 1: Elon Musk và SpaceX
+                </h3>
               </div>
             </div>
-          </div>
 
-          <div className="bg-white/90 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                <Music className="w-6 h-6 text-white" />
-              </div>
-              <h5 className="font-bold text-gray-800">Trong âm nhạc</h5>
-            </div>
-            <div className="space-y-3">
-              <div className="p-3 bg-green-50 rounded-lg border-l-3 border-green-400">
-                <p className="text-sm font-medium text-green-800 mb-1">
-                  ✅ Quan điểm duy tâm:
-                </p>
-                <p className="text-xs text-gray-600">
-                  "Âm nhạc hay chỉ cần có cảm xúc chân thành. Kỹ thuật chơi
-                  nhạc, chất lượng nhạc cụ không quan trọng bằng tâm hồn nghệ
-                  sĩ."
-                </p>
-              </div>
-              <div className="p-3 bg-red-50 rounded-lg border-l-3 border-red-400">
-                <p className="text-sm font-medium text-red-800 mb-1">
-                  ❌ Hạn chế:
-                </p>
-                <p className="text-xs text-gray-600">
-                  Coi nhẹ vai trò của kỹ thuật, luyện tập, và điều kiện vật chất
-                  trong nghệ thuật.
-                </p>
-              </div>
+            <div className="p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 font-bold mt-1">•</span>
+                  <span>
+                    Theo duy tâm: Chính{" "}
+                    <strong>ý tưởng "con người phải lên sao Hỏa"</strong> trong
+                    đầu Elon Musk đã quyết định, dẫn dắt sự hình thành và phát
+                    triển của SpaceX.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 font-bold mt-1">•</span>
+                  <span>
+                    Vật chất (tên lửa, trạm phóng, công nghệ) chỉ là kết quả sau
+                    này của "ý niệm" đó.
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:-rotate-1 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <Brain className="w-8 h-8 text-white" />
-          </div>
-          <h5 className="font-bold text-purple-700 mb-3 text-center text-lg">
-            💭 Quan điểm cốt lõi
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Ý thức là tồn tại duy nhất và quyết định, vật chất chỉ là biểu hiện
-            của tinh thần
-          </p>
-        </div>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
+              <div className="flex items-center gap-4 text-white">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Coins className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold">
+                  Kinh tế số & tiền điện tử (crypto, CBDC)
+                </h3>
+              </div>
+            </div>
 
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <Wand2 className="w-8 h-8 text-white" />
+            <div className="p-8">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-500 font-bold mt-1">•</span>
+                  <span>
+                    Theo quan điểm duy tâm: bản thân tiền điện tử không tồn tại
+                    "thực thể vật chất" như vàng hay tiền giấy, mà do{" "}
+                    <strong>niềm tin, ý thức của cộng đồng</strong> quyết định.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-blue-500 font-bold mt-1">•</span>
+                  <span>
+                    Vật chất (dãy số, mã hóa blockchain) chỉ là sự phản ánh của
+                    "ý niệm giá trị" mà con người gán cho nó.
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <h5 className="font-bold text-amber-700 mb-3 text-center text-lg">
-            ⚠️ Hạn chế chủ yếu
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Phủ nhận tính khách quan của thế giới, dẫn đến chủ nghĩa duy ý chí
-          </p>
-        </div>
-
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 hover:rotate-1 border border-white/50">
-          <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-            <Star className="w-8 h-8 text-white" />
-          </div>
-          <h5 className="font-bold text-red-700 mb-3 text-center text-lg">
-            📌 Hệ quả thực tiễn
-          </h5>
-          <p className="text-gray-600 text-center leading-relaxed">
-            Tách rời thực tiễn khách quan, không phản ánh đúng bản chất thế giới
-          </p>
         </div>
       </div>
 

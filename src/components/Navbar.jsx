@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Brain, Gamepad2, Home, BookOpen } from 'lucide-react';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Brain, Gamepad2, Home, BookOpen } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navigation = [
-    { name: 'Trang chủ', href: '/', icon: Home },
-    { name: 'Nội dung học tập', href: '/learning', icon: BookOpen },
-    { name: 'Flashcard Game', href: '/flashcard', icon: Gamepad2 },
-    { name: 'AI Analysis', href: '/ai-analysis', icon: Brain },
-    { name: 'Về chúng tôi', href: '/about', icon: BookOpen },
+    { name: "Trang chủ", href: "/", icon: Home },
+    { name: "Nội dung học tập", href: "/learning", icon: BookOpen },
+    { name: "Flashcard Game", href: "/flashcard", icon: Gamepad2 },
+    { name: "AI Analysis", href: "/ai-analysis", icon: Brain },
+    { name: "AI Usage", href: "/ai-usage", icon: Brain },
+
+    { name: "Về chúng tôi", href: "/about", icon: BookOpen },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -43,8 +45,8 @@ const Navbar = () => {
                 to={item.href}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 ${
                   isActive(item.href)
-                    ? 'text-blue-600'
-                    : 'text-gray-700 hover:text-blue-600'
+                    ? "text-blue-600"
+                    : "text-gray-700 hover:text-blue-600"
                 }`}
               >
                 {item.name}
@@ -78,8 +80,8 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
                     isActive(item.href)
-                      ? 'bg-blue-50 text-blue-600'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? "bg-blue-50 text-blue-600"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                 >
                   <Icon size={20} />
