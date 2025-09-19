@@ -1,5 +1,18 @@
 import React from "react";
-import { Eye, Volume2, Pause, ChevronRight, Star, Zap } from "lucide-react";
+import {
+  Eye,
+  Volume2,
+  Pause,
+  ChevronRight,
+  Star,
+  Zap,
+  Brain,
+  Target,
+  AlertTriangle,
+  BookOpen,
+  Lightbulb,
+  Users,
+} from "lucide-react";
 
 const DuyVatSieuHinhTab = ({ audioState }) => {
   const handleSpeak = () => {
@@ -27,15 +40,22 @@ Hệ quả trong thực tiễn:
   };
 
   return (
-    <div className="animate-fadeIn">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-            <Eye className="w-7 h-7 text-white" />
+    <div className="animate-fadeIn bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen p-4">
+      <div className="flex items-center justify-between mb-8 bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/50">
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 rounded-2xl flex items-center justify-center shadow-xl">
+              <Eye className="w-8 h-8 text-white animate-pulse" />
+            </div>
+            <div className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+              <Zap className="w-3 h-3 text-white" />
+            </div>
           </div>
-          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
-            Chủ nghĩa duy vật siêu hình
-          </h2>
+          <div>
+            <h2 className="text-xl md:text-3xl md:text- font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 bg-clip-text text-transparent">
+              Chủ nghĩa duy vật siêu hình
+            </h2>
+          </div>
         </div>
 
         <button
@@ -46,136 +66,288 @@ Hệ quả trong thực tiễn:
               audioState.currentPlayingTab !== 1)
           }
           className={`
-            flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all
+            flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold transition-all transform hover:scale-105
             ${
               audioState.currentPlayingTab === 1
-                ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-white"
+                ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-lg"
                 : audioState.currentPlayingTab !== null
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg"
+                : "bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:shadow-xl"
             }
-            disabled:opacity-50 disabled:cursor-not-allowed
+            disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
           `}
         >
           {audioState.isLoading && audioState.currentPlayingTab === 1 ? (
             <>
-              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
               Đang tải
             </>
           ) : audioState.currentPlayingTab === 1 ? (
             <>
-              <Pause className="w-4 h-4" />
+              <Pause className="w-5 h-5" />
               Đang phát
             </>
           ) : (
             <>
-              <Volume2 className="w-4 h-4" />
-              Phát âm
+              <Volume2 className="w-5 h-5" />
+              Phát âm thanh
             </>
           )}
         </button>
       </div>
 
-      <div className="bg-blue-50 rounded-xl p-6 mb-6">
-        <div className="prose max-w-none">
-          <h4 className="text-lg font-semibold text-purple-700 mt-4 mb-2 flex items-center gap-2">
-            <Eye className="w-5 h-5" />
-            Quan điểm cơ bản:
-          </h4>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Tuyệt đối hoá yếu tố vật chất sinh ra ý thức
-            </span>
+      <div className="mb-8 bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/50">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mb-4 shadow-lg">
+            <Brain className="w-10 h-10 text-white" />
           </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Vật chất quyết định hoàn toàn ý thức
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Phủ nhận tính độc lập tương đối của ý thức
-            </span>
-          </div>
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">
+            Bản chất của quan điểm
+          </h3>
+          <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Chủ nghĩa duy vật siêu hình coi vật chất là yếu tố duy nhất quyết
+            định ý thức, phủ nhận hoàn toàn tính năng động và vai trò tác động
+            ngược của ý thức đối với vật chất.
+          </p>
+        </div>
 
-          <h4 className="text-lg font-semibold text-purple-700 mt-4 mb-2 flex items-center gap-2">
-            <Zap className="w-5 h-5" />
-            Đặc điểm:
-          </h4>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Phủ nhận tính năng động, sáng tạo của ý thức
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Coi ý thức chỉ là sự phản ánh thụ động
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Không thừa nhận vai trò tác động trở lại của ý thức
-            </span>
-          </div>
+        <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center gap-6">
+            <div className="text-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-gray-600 to-gray-800 rounded-full flex items-center justify-center shadow-lg mb-3">
+                <div className="w-8 h-8 bg-white rounded-sm"></div>
+              </div>
+              <p className="font-semibold text-gray-700">VẬT CHẤT</p>
+              <p className="text-sm text-gray-500">Quyết định tuyệt đối</p>
+            </div>
 
-          <h4 className="text-lg font-semibold text-purple-700 mt-4 mb-2 flex items-center gap-2">
-            <Star className="w-5 h-5" />
-            Hệ quả:
-          </h4>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Rơi vào trạng thái thụ động, ỷ lại
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Trông chờ vào điều kiện khách quan
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Không phát huy được yếu tố con người
-            </span>
-          </div>
-          <div className="flex items-start gap-2 ml-4 mb-2">
-            <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-            <span className="text-gray-700">
-              Thiếu hiệu quả trong hoạt động thực tiễn
-            </span>
+            <div className="flex flex-col items-center gap-3">
+              <ChevronRight className="w-10 h-10 text-blue-500 animate-pulse" />
+              <span className="text-sm font-bold text-blue-600 bg-purple-100 px-3 py-1 rounded-full">
+                QUYẾT ĐỊNH
+              </span>
+            </div>
+
+            <div className="text-center relative">
+              <div className="w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg mb-3 opacity-60">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <p className="font-semibold text-gray-700">Ý THỨC</p>
+              <p className="text-sm text-gray-500">Phản ánh thụ động</p>
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">✗</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-        <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-          <h5 className="font-semibold text-blue-700 mb-2">
+      <div className="mb-8">
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 shadow-lg border border-blue-200">
+          <h4 className="text-2xl font-bold text-blue-700 mb-6 flex items-center gap-3">
+            <Target className="w-7 h-7" />
+            Quan điểm cơ bản
+          </h4>
+
+          <div className="space-y-4">
+            <div className="flex items-start gap-4 bg-white/70 rounded-2xl p-4 transform hover:scale-102 transition-all">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">1</span>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">
+                  Tuyệt đối hoá yếu tố vật chất
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Chỉ có vật chất là thực tại duy nhất, mọi hiện tượng khác đều
+                  phụ thuộc hoàn toàn vào nó
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-white/70 rounded-2xl p-4 transform hover:scale-102 transition-all">
+              <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">2</span>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">
+                  Vật chất quyết định hoàn toàn ý thức
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Ý thức hoàn toàn bị động, không có khả năng tác động ngược lại
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-white/70 rounded-2xl p-4 transform hover:scale-102 transition-all">
+              <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">3</span>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-800 mb-1">
+                  Phủ nhận tính độc lập tương đối
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Ý thức không có bất kỳ sự tự chủ nào trong hoạt động của mình
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="bg-gradient-to-br from-amber-50 to-orange-100 rounded-3xl p-8 shadow-lg border border-amber-200">
+          <h4 className="text-2xl font-bold text-amber-700 mb-6 flex items-center gap-3">
+            <Zap className="w-7 h-7" />
+            Đặc điểm nổi bật
+          </h4>
+
+          <div className="space-y-3">
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
+              <span className="text-gray-700">
+                Phủ nhận tính năng động, sáng tạo của ý thức
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
+              <span className="text-gray-700">
+                Coi ý thức chỉ là sự phản ánh thụ động
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <AlertTriangle className="w-5 h-5 text-amber-600" />
+              <span className="text-gray-700">
+                Không thừa nhận vai trò tác động trở lại
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-br from-red-50 to-pink-100 rounded-3xl p-8 shadow-lg border border-red-200">
+          <h4 className="text-2xl font-bold text-red-700 mb-6 flex items-center gap-3">
+            <Star className="w-7 h-7" />
+            Hệ quả tiêu cực
+          </h4>
+
+          <div className="space-y-3">
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <ChevronRight className="w-5 h-5 text-red-600" />
+              <span className="text-gray-700">
+                Rơi vào trạng thái thụ động, ỷ lại
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <ChevronRight className="w-5 h-5 text-red-600" />
+              <span className="text-gray-700">
+                Trông chờ vào điều kiện khách quan
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <ChevronRight className="w-5 h-5 text-red-600" />
+              <span className="text-gray-700">
+                Không phát huy được yếu tố con người
+              </span>
+            </div>
+            <div className="flex items-center gap-3 bg-white/70 rounded-xl p-3">
+              <ChevronRight className="w-5 h-5 text-red-600" />
+              <span className="text-gray-700">
+                Thiếu hiệu quả trong thực tiễn
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl p-8 shadow-lg border border-green-200 mb-8">
+        <h4 className="text-2xl font-bold text-green-700 mb-6 flex items-center gap-3">
+          <BookOpen className="w-7 h-7" />
+          Ví dụ minh họa trong thực tế
+        </h4>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white/80 rounded-2xl p-6 shadow-md">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold">x</span>
+              </div>
+              <h5 className="font-bold text-gray-800">
+                Trong phát triển cá nhân
+              </h5>
+            </div>
+            <p className="text-gray-600 mb-3 font-medium">Quan điểm sai lầm:</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              "Tính cách và tài năng hoàn toàn do gen quyết định. Con người
+              không thể thay đổi bản thân, chỉ có thể chờ đợi điều kiện thuận
+              lợi."
+            </p>
+          </div>
+
+          <div className="bg-white/80 rounded-2xl p-6 shadow-md">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-red-500 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold">x</span>
+              </div>
+              <h5 className="font-bold text-gray-800">Trong xã hội</h5>
+            </div>
+            <p className="text-gray-600 mb-3 font-medium">Quan điểm sai lầm:</p>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              "Xã hội thay đổi chỉ do yếu tố kinh tế. Ý thức, văn hóa, tư tưởng
+              không có vai trò gì trong sự tiến bộ xã hội."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
+          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+            <Target className="w-8 h-8 text-white" />
+          </div>
+          <h5 className="font-bold text-blue-700 mb-3 text-center text-lg">
             🎯 Quan điểm cốt lõi
           </h5>
-          <p className="text-sm text-gray-600">
-            Vật chất quyết định tuyệt đối ý thức
+          <p className="text-gray-600 text-center leading-relaxed">
+            Vật chất quyết định tuyệt đối ý thức, không thừa nhận vai trò tác
+            động ngược
           </p>
         </div>
-        <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-          <h5 className="font-semibold text-blue-700 mb-2">⚠️ Hạn chế</h5>
-          <p className="text-sm text-gray-600">
-            Phủ nhận tính năng động của ý thức
+
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
+          <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+            <AlertTriangle className="w-8 h-8 text-white" />
+          </div>
+          <h5 className="font-bold text-amber-700 mb-3 text-center text-lg">
+            ⚠️ Hạn chế chủ yếu
+          </h5>
+          <p className="text-gray-600 text-center leading-relaxed">
+            Phủ nhận tính năng động, sáng tạo và độc lập tương đối của ý thức
           </p>
         </div>
-        <div className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow">
-          <h5 className="font-semibold text-blue-700 mb-2">📌 Hệ quả</h5>
-          <p className="text-sm text-gray-600">
-            Dẫn đến thụ động, ỷ lại trong thực tiễn
+
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-white/50">
+          <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+            <Users className="w-8 h-8 text-white" />
+          </div>
+          <h5 className="font-bold text-red-700 mb-3 text-center text-lg">
+            📌 Hệ quả thực tiễn
+          </h5>
+          <p className="text-gray-600 text-center leading-relaxed">
+            Dẫn đến thụ động, ỷ lại, không phát huy được tiềm năng con người
           </p>
         </div>
+      </div>
+
+      <div className="mt-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 text-white shadow-xl">
+        <Lightbulb className="w-12 h-12 mx-auto mb-4 animate-bounce" />
+        <h3 className="text-2xl font-bold mb-3">Bài học quan trọng</h3>
+        <p className="text-blue-100 leading-relaxed max-w-3xl mx-auto">
+          Chủ nghĩa duy vật siêu hình tuy nhận ra tầm quan trọng của vật chất,
+          nhưng đã rơi vào thái cực phủ nhận vai trò của ý thức. Điều này dẫn
+          đến sự thụ động và thiếu hiệu quả trong thực tiễn. Cần có cái nhìn
+          biện chứng về mối quan hệ vật chất - ý thức.
+        </p>
       </div>
     </div>
   );
