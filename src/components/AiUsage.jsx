@@ -68,7 +68,7 @@ export default function AIUsageReport() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <BookOpen className="w-4 h-4 text-blue-500" />
-                  Điều chỉnh câu hỏi quiz phù hợp với nội dung bài học
+                  Điều chỉnh flash card phù hợp với nội dung bài học
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <Clock className="w-4 h-4 text-blue-500" />
@@ -130,6 +130,10 @@ export default function AIUsageReport() {
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-blue-500" />
                   Tóm tắt nội dung từ slide của trường
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <CheckCircle className="w-4 h-4 text-blue-500" />
+                  Thêm tính năng AI Gemini cho website
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-blue-500" />
@@ -216,7 +220,7 @@ export default function AIUsageReport() {
                   <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-bold">
                     1
                   </span>
-                  Không để AI làm thay hoàn toàn:
+                  Không để AI làm thay hoàn toàn
                 </h3>
               </div>
 
@@ -225,7 +229,7 @@ export default function AIUsageReport() {
                   <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm font-bold">
                     2
                   </span>
-                  Phân định rõ AI output và phần sinh viên:
+                  Phân định rõ AI output và phần sinh viên
                 </h3>
               </div>
 
@@ -234,7 +238,7 @@ export default function AIUsageReport() {
                   <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm font-bold">
                     3
                   </span>
-                  Đối chiếu nguồn chính thống:
+                  Đối chiếu nguồn chính thống
                 </h3>
               </div>
             </div>
