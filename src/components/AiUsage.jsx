@@ -291,7 +291,9 @@ export default function AIUsageReport() {
                   <Users className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">Hồ Quốc Bảo</p>
+                  <p className="font-semibold text-gray-800">
+                    Nguyễn Hồ Quốc Bảo
+                  </p>
                 </div>
               </div>
 
